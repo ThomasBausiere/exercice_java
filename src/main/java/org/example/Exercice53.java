@@ -8,6 +8,7 @@ public class Exercice53 {
         1. Écrire un programme avec les variables suivantes : a, b
         2. Afficher la somme des carrés de ces deux nombres
      */
+        System.out.println("Début du programme");
         Scanner scanner = new Scanner(System.in);
 
         int a, b, c;
