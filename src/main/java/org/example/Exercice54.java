@@ -17,17 +17,9 @@ public class Exercice54 {
         System.out.println("Vérfication de votre âge.");
         System.out.println("Veuillez saisir votre âge:");
         int age = scanner.nextInt();
-        if(age>=18){
-            System.out.println("Merci pour cette information.");
-            System.out.println("Vérification en cours");
-
-            System.out.println("Vous avez l'âge requis. Vous pouvez entrer.");
-        }else{
-            System.out.println("Merci pour cette information.");
-            System.out.println("Vérification en cours");
-
-            System.out.println("Vous êtes trop jeune, vous ne pouvez pas entrer.");
-        }
+        boolean verification = (age >= 18);
+        System.out.println("Age: "+ age);
+        System.out.println(verification);
 
         System.out.println("Fin du programme");
     }
