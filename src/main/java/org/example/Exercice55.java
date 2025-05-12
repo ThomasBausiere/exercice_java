@@ -21,6 +21,7 @@ public class Exercice55 {
 
 
         System.out.printf("Le volume du cône saisi est de: %, .2f cm3",result);
+        System.out.println("Fin du programme.");
 
     }
 }
