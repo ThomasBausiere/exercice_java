@@ -1,5 +1,6 @@
 package org.example;
 
+import java.util.Arrays;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -17,19 +18,34 @@ public class Exercice56 {
         System.out.println("Début du programme");
         Scanner scanner = new Scanner(System.in);
         System.out.println("Modification de l'affichage d'une chaîne de caractères.");
-        System.out.println("Veuillez saisir une chaîne de caractère.");
+        System.out.println("Veuillez saisir une chaîne de caractères.");
         String phrase = scanner.nextLine();
-        System.out.println("Voici la phrase en minuscule");
-        System.out.println(phrase.toLowerCase(Locale.ROOT));
+        String chaineMajuscule = phrase.toUpperCase();
+        String chaineMinuscule = phrase.toLowerCase();
+        System.out.println("Voici la phrase en minuscule: ");
+        System.out.println(chaineMinuscule);
         System.out.println("Voici la phrase en majuscule");
-        System.out.println(phrase.toUpperCase(Locale.ROOT));
+        System.out.println(chaineMajuscule);
 
 
         System.out.println("Séparer chaque caractère par une virgule");
-        char[] Phrases= phrase.toCharArray(); //on transforme la chaine en tableau de chaine de caractère
-        for (char lettre : Phrases){
-            System.out.print(lettre+", ");
-        }
+
+        String[] motchaine = phrase.split("");
+        System.out.println(Arrays.toString(motchaine));
+
+
+        System.out.println("Faire passer chaque premier mot en majuscule");
+        String[] toMots = phrase.split(" ");
+        System.out.println(Arrays.toString(motchaine));
+
+
+
+
+
+        //char[] phrases= phrase.toCharArray(); //on transforme la chaine en tableau de chaine de caractère
+        //for (char lettre : phrases){
+         //   System.out.print(lettre+", ");
+        //}
         /*
                 System.out.println("\n");
         System.out.println("Afficher la premiere lettre en majuscule");

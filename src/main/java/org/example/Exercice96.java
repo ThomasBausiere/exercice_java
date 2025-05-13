@@ -17,11 +17,13 @@ public class Exercice96 {
         System.out.println(Arrays.toString(tableau));
         int max=0;
         for( int i=0;i<tableau.length; i++){
-            boolean isEmpty = (i==0) ? (isEmpty=true): (isEmpty= false);
-            if(isEmpty){
+            //boolean isEmpty = (i==0) ? (isEmpty=true): (isEmpty= false);
+           // if(isEmpty)
+            if(i==0)
+            {
                 max=tableau[i];
             } else if (max < tableau[i]) {
-                max = max=tableau[i];
+                max = tableau[i];
             }
         }
         System.out.println(max);

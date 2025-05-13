@@ -11,17 +11,24 @@ public class Exercice71 {
        est une consonne ou une voyelle
  */
         System.out.println("Début du programme");
-        char caractere;
+        char caractere, test;
+        String voyelles= "aeiouy";
+
         Scanner scanner = new Scanner(System.in);
         System.out.println("Veuillez saisir un caractère");
-        caractere = scanner.nextLine().charAt(0); // pour prendre uniquement le premier caractère saisi par l'utilisateur si celui ci en tape plusieurs
-        System.out.println("la lettre retenue est: "+ caractere+".");
-        if((caractere== 'a') || (caractere== 'e')||(caractere== 'i')||(caractere=='o' )||(caractere== 'u')||(caractere== 'y')){
-            System.out.println("Le caractère est une voyelle");
-        }else{
-            System.out.println("Le caractère n'est pas une voyelle.");
+        caractere = scanner.nextLine().toLowerCase().charAt(0);
 
+        if(caractere >= 'a' && caractere<= 'z') {
+            System.out.println("C'est une lettre");
+            if (voyelles.contains(Character.toString(caractere))) {//contains permet de vérifier si les paramètres contenu dans cette methode est contenu dans le string
+                System.out.println("Le caractère est une voyelle");
+            } else {
+                System.out.println("Le caractère est une consonne.");
+            }
+        }else {
+            System.out.println("Ce n'est pas une lettre");
         }
-        System.out.println("Fin du programme");
+
+       System.out.println("Fin du programme");
     }
 }
