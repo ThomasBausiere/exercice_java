@@ -1,9 +1,9 @@
 package org.example.exoPoo.chaise;
 
 public class Chaise {
-    public int nombreDePied;
-    public String materiaux;
-    public String couleurs;
+    private int nombreDePied;
+    private String materiaux;
+    private String couleurs;
 
     public Chaise(int nombreDePied, String materiaux, String couleurs) {
         this.nombreDePied = nombreDePied;
