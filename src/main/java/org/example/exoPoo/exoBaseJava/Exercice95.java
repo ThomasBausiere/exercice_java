@@ -1,7 +1,6 @@
-package org.example;
+package org.example.exoPoo.exoBaseJava;
 
 import java.util.Arrays;
-import java.util.Scanner;
 
 public class Exercice95 {
     public static void main(String[] args) {

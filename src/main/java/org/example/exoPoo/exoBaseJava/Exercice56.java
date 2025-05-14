@@ -1,7 +1,6 @@
-package org.example;
+package org.example.exoPoo.exoBaseJava;
 
 import java.util.Arrays;
-import java.util.Locale;
 import java.util.Scanner;
 
 public class Exercice56 {

@@ -1,4 +1,4 @@
-package org.example;
+package org.example.exoPoo.exoBaseJava;
 
 import java.util.Arrays;
 

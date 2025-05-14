@@ -1,4 +1,4 @@
-package org.example;
+package org.example.exoPoo.exoBaseJava;
 
 public class Exercice51 {
     public static void main(String[] args) {

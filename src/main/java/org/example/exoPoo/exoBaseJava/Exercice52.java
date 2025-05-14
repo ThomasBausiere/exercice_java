@@ -1,6 +1,4 @@
-package org.example;
-
-import org.w3c.dom.ls.LSOutput;
+package org.example.exoPoo.exoBaseJava;
 
 import java.util.Scanner;
 
