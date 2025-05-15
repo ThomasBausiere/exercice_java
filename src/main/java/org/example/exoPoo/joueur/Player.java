@@ -1,13 +1,15 @@
 package org.example.exoPoo.joueur;
 
-public class Joueur {
+public class Player {
     private String charName;
     private int levelChar;
     private double currentXpChar;
     private double nextLevelsXpRequired;
+    private int mobSlain=0;
+    private int questAccomplished = 0;
 
 
-    public Joueur(String charName) {
+    public Player(String charName) {
         this.charName = charName;
         this.levelChar = 1;
         this.currentXpChar = 0;
@@ -21,23 +23,22 @@ public class Joueur {
 
     public void questRewards(){
         currentXpChar+= 25;
+        questAccomplished++;
         levelUp();
     }
+    public void mobBashing(){
+        currentXpChar+= 10;
+        mobSlain++;
+        levelUp();
+    }
+
     private double nextLevelsXpLeft(){
         return levelXpRequired() - currentXpChar;
     }
 
-
-
         private void levelUp(){
-
-            if(levelChar != 1){
-                if (currentXpChar >=nextLevelsXpLeft()){
-                    levelChar++;
-            }else{
-                    if(currentXpChar >= 100);
-                    levelChar++;
-                }
+                if (currentXpChar >= 100){
+                      levelChar++;
         }
     }
 
@@ -65,13 +66,16 @@ public class Joueur {
     public void setLevelChar(int levelChar) {
         this.levelChar = levelChar;
     }
+
     @Override
     public String toString() {
-        return "Joueur{" +
+        return "Player{" +
                 "charName='" + charName + '\'' +
                 ", levelChar=" + levelChar +
                 ", currentXpChar=" + currentXpChar +
                 ", nextLevelsXpRequired=" + nextLevelsXpRequired +
+                ", mobSlain=" + mobSlain +
+                ", questAccomplished=" + questAccomplished +
                 '}';
     }
 }
