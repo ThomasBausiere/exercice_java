@@ -77,15 +77,15 @@ public class Player {
 
     @Override
     public String toString() {
-        return "Player{" +
-                "charName='" + charName + '\'' +
-                ", levelChar=" + levelChar +
-                ", currentXpChar=" + currentXpChar +
-                ", totalXpChar=" + totalXpChar +
-                ", nextLevelsXpRequired=" + nextLevelsXpRequired +
-                ", mobSlain=" + mobSlain +
-                ", questAccomplished=" + questAccomplished +
-                ",nextLevelXpLeft ="+nextLevelXpLeft+
+        return "This session{ \n" +
+                "\t My name is: ' " + charName + "'." +"\n"+
+                "\t I'm level" + levelChar +".\n"+
+                "\t I have earn" + currentXpChar +"of exp since my last level up .\n"+
+                "\t Since i was born, i've cumulate" + totalXpChar +" of experience.\n"+
+                "\t I need " + nextLevelXpLeft +" to reach the next level.\n"+
+                "\t The next level required ="+nextLevelsXpRequired+".\n"+
+                "\t I have slain" + mobSlain +" of monsters in my entire life.\n"+
+                "\t I completed" + questAccomplished +" quests since i began to be an hero.\n"+
                 '}';
     }
 }
