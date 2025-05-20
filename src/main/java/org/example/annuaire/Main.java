@@ -2,10 +2,16 @@ package org.example.annuaire;
 
 import org.example.annuaire.Entreprise;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
+       // AnnuaireEntreprise annuaireEntreprise= new AnnuaireEntreprise("salut", "wwwhello", "test","test");
+        Entreprise entreprise1 = new Entreprise("siteweb", "super", "super2" ,"super3");
+        Entreprise entreprise2 = new Entreprise("sdzaiteweb", "sudada per", "sdadauper2" ,"su adaper3");
+
         Scanner scanner = new Scanner(System.in);
 
 
@@ -25,10 +31,17 @@ public class Main {
             switch (mainMenu) {
                 case 1:
                     scanner.nextLine();
+                    String nom, adresse, siteWeb, numSiret;
                     System.out.println("Veuillez saisir le nom de l'entreprise");
-                    String nom = scanner.nextLine();
-                    Entreprise entreprise = new Entreprise(nom);
-                    Entreprise.ajoutEntreprise(nom);
+                    nom = scanner.nextLine();
+                    System.out.println("Veuillez saisir l'adresse de l'entreprise");
+                    adresse = scanner.nextLine();
+                    System.out.println("Veuillez saisir le num Siret de l'entreprise");
+                    numSiret = scanner.nextLine();
+                    System.out.println("Veuillez saisir l'adresse web de l'entreprise");
+                    siteWeb = scanner.nextLine();
+
+                    //ajoutEntreprise(nom, adresse, numSiret, siteWeb);
                     break;
                 case 2:
 
