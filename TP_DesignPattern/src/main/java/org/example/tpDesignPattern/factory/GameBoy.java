@@ -7,6 +7,7 @@ public class GameBoy implements Toy {
 
     @Override
     public String getDescription() {
+
         return "Game Boy";
     }
 
