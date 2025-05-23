@@ -37,7 +37,7 @@ public class Main {
                         break;
                     case 4:
                         supprimerEtudiant();
-                        System.out.println("Etudiants supprimé");
+                        System.out.println("Etudiant supprimé");
                         break;
                     case 0:
                         System.out.println("Program ending.");
