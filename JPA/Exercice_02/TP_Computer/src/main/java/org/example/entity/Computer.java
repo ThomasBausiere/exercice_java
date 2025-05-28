@@ -23,6 +23,16 @@ public class Computer {
     @Embedded
     private Identification identification;
 
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
+    @JoinColumn(name="idProcessor")
+    private Processor processor;
+
+    @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.REFRESH})
+    @JoinColumn(name="idOperatingSystem")
+    private OperatingSystem operatingSystem;
+
+
+
     @Override
     public String toString() {
         return "Computer{" +
