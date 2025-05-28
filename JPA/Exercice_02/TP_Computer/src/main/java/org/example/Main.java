@@ -24,7 +24,7 @@ public class Main {
         Identification identification= new Identification("maxadressExemple","IPADRESST0O:00");
 //        Identification identification2= new Identification("maxadressExemple2","IPADRESST0O:00");
 //        Identification identification3= new Identification("maxadressExemple3","IPADRESST0O:0000");
-        Computer computer1 = Computer.builder().model("rog1").identification(identification).build();
+        Computer computer1 = Computer.builder().model("rog1").identification(identification).operatingSystem(OperatingSystem.builder().name("NewOS").build()).processor(Processor.builder().processorName("justGiveItAry").build()).build();
 //        Computer computer2 = Computer.builder().model("rog2").identification(identification2).build();
 //        Computer computer3 = Computer.builder().model("rog3").identification(identification3).build();
 //
@@ -45,14 +45,16 @@ public class Main {
 
 //        System.out.println(cptDao.getAll());
 
-        Processor processor = Processor.builder().processorName("Obiwan").computers(Arrays.asList(computer1)).build();
-        processorDao.save(processor);
+//        Processor processor = Processor.builder().processorName("Obiwan").computers(Arrays.asList(computer1)).build();
+//        processorDao.save(processor);
+//
+//        OperatingSystem operatingSystem =OperatingSystem.builder().name("Kenobi").computers(Arrays.asList(computer1)).build();
+//        operatingSystemDao.save(operatingSystem);
 
-        OperatingSystem operatingSystem =OperatingSystem.builder().name("Kenobi").computers(Arrays.asList(computer1)).build();
-        operatingSystemDao.save(operatingSystem);
 
 
-        cptDao.update(computer1);
+//
+//        cptDao.update(computer1);
 
     }
 }
