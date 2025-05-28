@@ -5,6 +5,10 @@ import org.example.util.DataBaseManager;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityNotFoundException;
+import javax.persistence.Query;
+import javax.persistence.TypedQuery;
+import java.util.ArrayList;
+import java.util.List;
 
 public class ComputerDao {
 
@@ -21,6 +25,11 @@ public class ComputerDao {
 
     public Computer getComputerById(int id){
         return em.find(Computer.class, id);
+    }
+
+    public List<Computer> getAllComputer(){
+        TypedQuery<Computer> query = em.createQuery("select c from Computer c", Computer.class);
+        return query.getResultList();
     }
 
     public void updateComputer(int id, String name) {

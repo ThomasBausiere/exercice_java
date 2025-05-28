@@ -23,5 +23,12 @@ public class Computer {
     @Embedded
     private Identification identification;
 
-
+    @Override
+    public String toString() {
+        return "Computer{" +
+                "id=" + id +
+                ", model='" + model + '\'' +
+                ", identification=" + identification +
+                '}';
+    }
 }
