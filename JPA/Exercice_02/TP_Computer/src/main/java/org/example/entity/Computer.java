@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @Entity
@@ -31,6 +32,14 @@ public class Computer {
     @JoinColumn(name="idOperatingSystem")
     private OperatingSystem operatingSystem;
 
+    @ManyToMany
+    @JoinTable(name="computer_project",
+    joinColumns = @JoinColumn(name="computerId"),
+    inverseJoinColumns = @JoinColumn(name="projectId"))
+    private List<Project> projects;
+
+    public void addProject(Project project){projects.add(project);}
+    public void removeProject(Project project){projects.remove(project);}
 
 
     @Override
@@ -39,6 +48,9 @@ public class Computer {
                 "id=" + id +
                 ", model='" + model + '\'' +
                 ", identification=" + identification +
+                ", processor=" + processor +
+                ", operatingSystem=" + operatingSystem +
+                ", projects=" + projects +
                 '}';
     }
 }
