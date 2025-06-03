@@ -84,14 +84,26 @@ public class Ihm {
     private void showProductById(){
         System.out.println("saisir l'id du produit à afficher");
         int input = scanner.nextInt();
-        scanner.nextInt();
+        scanner.nextLine();
         productDao.getById(input, Product.class);
         System.out.println(productDao.getById(input, Product.class));
     }
     private void updateProduct(){
-        productDao.getById(input, Product.class)
+        System.out.println("saisir l'id du produit à modifier");
+        int input = scanner.nextInt();
+        scanner.nextLine();
+        Product productToUpdate = productDao.getById(input, Product.class);
+        System.out.println("Saisir le new nom");
+        productToUpdate.setName(scanner.nextLine());
+        productDao.update(productToUpdate);
+
     }
-    private void removeProduct(){}
+    private void removeProduct(){
+        System.out.println("saisir l'id du produit à supprimer");
+        int input = scanner.nextInt();
+        scanner.nextLine();
+        productDao.delete(input, Product.class);
+    }
 
     private void addProductFood(){
         System.out.println("Nouveau Produit Alimentaire");

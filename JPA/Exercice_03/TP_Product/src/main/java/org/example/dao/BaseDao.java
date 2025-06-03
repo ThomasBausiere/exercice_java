@@ -6,7 +6,7 @@ import javax.persistence.EntityManager;
 
 public abstract class BaseDao<T> {
 
-    protected  EntityManager em;
+    protected     EntityManager em;
 
     public BaseDao(){
         em = DataBaseManager.getEntityManager();
