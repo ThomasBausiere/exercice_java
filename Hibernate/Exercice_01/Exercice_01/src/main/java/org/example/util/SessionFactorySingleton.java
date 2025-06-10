@@ -7,6 +7,7 @@ import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 public class SessionFactorySingleton {
+
     private static StandardServiceRegistry registry;
     private static SessionFactory sessionFactory;
 
@@ -15,15 +16,12 @@ public class SessionFactorySingleton {
         sessionFactory = new MetadataSources(registry).buildMetadata().buildSessionFactory();
     }
 
-    public static synchronized Session getSession(){
+    public static synchronized SessionFactory getSessionFactory(){
         if(sessionFactory ==null){
             new SessionFactorySingleton();
         }
-        return sessionFactory.openSession();
+        return sessionFactory;
     }
 
-    public static void close(){
-        sessionFactory.close();
-        registry.close();
-    }
+
 }
