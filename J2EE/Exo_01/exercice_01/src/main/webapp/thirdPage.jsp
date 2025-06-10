@@ -9,9 +9,10 @@
 <html>
 <head>
     <title>Title</title>
+    <%@include file="WEB-INF/monStyle.jsp"%>
 </head>
 <body>
-<%@include file="WEB-INF/monStyle.jsp"%>
+
 <p>ceci est un essai de style: page 3</p>
 </body>
 </html>
