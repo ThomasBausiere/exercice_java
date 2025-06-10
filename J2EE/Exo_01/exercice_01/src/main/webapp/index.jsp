@@ -3,21 +3,27 @@
 <html>
 <head>
     <title>JSP - Hello World</title>
+    <%@include file="WEB-INF/monStyle.jsp"%>
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<h2>exo 1</h2>
-<a href="text-brut"> Servlet txt/brut</a>
-<a href="text-html"> Servlet txt/html</a>
-<a href="page-jsp"> Servlet JSP</a>
-<br/>
-<h2>exo 2</h2>
-<ul>
-    <li><a href="page2"> page 2</a></li>
-    <li><a href="page3"> page 3</a></li>
-</ul>
+<h1><%= "App JEE" %></h1>
+<section>
+    <h2>exo 1</h2>
+    <ul>
+        <li><a href="text-brut"> Vers page générée par un Servlet en text brut</a></li>
+        <li><a href="text-html"> Vers page générée par un Servlet en text html</a></li>
+        <li><a href="page-jsp">  Vers page générée par unServlet JSP</a></li>
+    </ul>
+</section>
+
+<section>
+    <h2>exo 2</h2>
+    <ul>
+        <li><a href="page2"> Vers la page 2, dont un include importe le CSS. </a></li>
+        <li><a href="page3"> Vers la page 3, dont un include importe le CSS.</a></li>
+    </ul>
+</section>
+
 
 
 

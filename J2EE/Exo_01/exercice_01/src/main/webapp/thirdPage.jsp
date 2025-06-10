@@ -12,7 +12,6 @@
     <%@include file="WEB-INF/monStyle.jsp"%>
 </head>
 <body>
-
 <p>ceci est un essai de style: page 3</p>
 </body>
 </html>
