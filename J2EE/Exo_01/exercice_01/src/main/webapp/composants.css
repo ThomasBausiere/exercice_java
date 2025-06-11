@@ -23,6 +23,7 @@
     user-select: none;
     -webkit-user-select: none;
     touch-action: manipulation;
+    width: 100%;
 }
 
 .button-80:not(:disabled):hover {
@@ -60,7 +61,8 @@
 }
 
 
-button > a{
+a{
     text-decoration: none;
     color: black;
+    width: 100%;
 }

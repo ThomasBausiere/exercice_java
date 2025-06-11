@@ -12,20 +12,20 @@
 
 <section>
     <h2>Exercice n°1</h2>
-    <button class="button-80" role="button"><a href="text-brut"> Vers page générée par un Servlet en text brut</a></button>
-    <button class="button-80" role="button"><a href="text-html"> Vers page générée par un Servlet en text html</a></button>
-    <button class="button-80" role="button"><a href="page-jsp">  Vers page générée par un Servlet Java Single Page</a></button>
+    <a href="text-brut"><button class="button-80" role="button"> Vers page générée par un Servlet en text brut</button></a>
+    <a href="text-html"><button class="button-80" role="button"> Vers page générée par un Servlet en text html</button></a>
+    <a href="page-jsp"><button class="button-80" role="button">  Vers page générée par un Servlet Java Single Page</button></a>
 </section>
 
 <section>
     <h2>Exercice n°2</h2>
-        <button class="button-80" role="button"><a href="page2"> Vers la page 2, dont un include importe le CSS. </a></button>
-        <button class="button-80" role="button"><a href="page3"> Vers la page 3, dont un include importe le CSS.</a></button>
+    <a href="page2"><button class="button-80" role="button"> Vers la page 2, dont un include importe le CSS. </button></a>
+    <a href="page3"><button class="button-80" role="button"> Vers la page 3, dont un include importe le CSS.</button></a>
 </section>
 
 <section>
     <h2>Exercice n°3</h2>
-    <button class="button-80" role="button"><a href="person"> Exo 3 </a></button>
+    <a href="person"><button class="button-80" role="button"> Exo 3 </button></a>
 
 
 </section>

@@ -24,7 +24,6 @@
             <td><%= personne.getName() %> </td>
             <td><%= personne.getFirstname() %> </td>
             <td><%= personne.getAge() %> </td>
-
         </tr>
         <% } %>
     </tbody>
