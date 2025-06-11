@@ -6,6 +6,11 @@
     <link rel="stylesheet" href="${pageContext.request.contextPath}/style.css">
 </head>
 <body>
-    <h1>there is nothing to commit</h1>
+
+    <section>
+        <h1> Page générée oar JSP</h1>
+        <button class="button-80" role="button"><a href=""> Page d'accueil</a></button>
+    </section>
+
 </body>
 </html>

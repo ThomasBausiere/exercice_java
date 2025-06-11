@@ -12,7 +12,13 @@
     <%@include file="WEB-INF/monStyle.jsp"%>
 </head>
 <body>
+<header>
+    <div class="space-invader"></div>
 
-    <p>ceci est un essai de style: page 2</p>
+</header>
+
+    <p>Ceci est un essai de style: page 2</p>
+
+
 </body>
 </html>

@@ -1,3 +1,44 @@
+
+
+
+
+header{
+text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 100px;
+    width: 50%;
+    min-height: 300px;
+    height: 25%;
+}
+
+
+
+
+
 body{
-    background-color: red;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(90deg,rgba(201, 210, 214, 1) 0%, rgba(125, 143, 189, 1) 50%, rgba(26, 36, 217, 1) 100%);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
