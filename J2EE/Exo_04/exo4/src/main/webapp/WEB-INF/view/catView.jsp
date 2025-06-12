@@ -1,4 +1,5 @@
 <%@ page import="org.example.exo4.model.Cat" %>
+<%@ page import="java.time.format.DateTimeFormatter" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 
 <jsp:useBean id="cats" type="java.util.List<org.example.exo4.model.Cat>" scope="request"/>
@@ -28,7 +29,7 @@
         <td><%= cat.getCatName() %> </td>
         <td><%= cat.getRaceName() %> </td>
         <td><%= cat.getFavoriteFood() %> </td>
-        <td><%= cat.getBirthDate() %> </td>
+        <td><%= cat.getBirthDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) %> </td>
     </tr>
     <% } }%>
     </tbody>
