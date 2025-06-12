@@ -3,7 +3,7 @@ package org.example.exercice_05.controller;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.*;
-import org.example.exercice_05.controller.dao.DogDao;
+import org.example.exercice_05.dao.DogDao;
 import org.example.exercice_05.model.Dog;
 
 import java.io.IOException;

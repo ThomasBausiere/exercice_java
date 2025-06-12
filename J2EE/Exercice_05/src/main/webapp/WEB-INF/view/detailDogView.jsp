@@ -1,38 +1,36 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ page import="org.example.exercice_05.model.Dog" %>
 <%@ page import="java.time.format.DateTimeFormatter" %>
-
 <jsp:useBean id="dog" type="org.example.exercice_05.model.Dog" scope="request" />
 
 <html>
 <head>
-    <title>Détail du chien</title>
+    <title>View a Dog</title>
+    <%@include file="/style/importCss2.jsp"%>
+
 </head>
-<body>
+<body class="body-view">
 
-<h2>Détails du chien</h2>
+<form class="view-form">
+    <h2>- View a Dog -</h2>
 
-<table border="1">
-    <tr>
-        <th>ID</th>
-        <td><%= dog.getId() %></td>
-    </tr>
-    <tr>
-        <th>Nom</th>
-        <td><%= dog.getDogName() %></td>
-    </tr>
-    <tr>
-        <th>Race</th>
-        <td><%= dog.getRaceName() %></td>
-    </tr>
-    <tr>
-        <th>Date de naissance</th>
-        <td><%= dog.getBirthDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) %></td>
-    </tr>
-</table>
+    <div>
+        <label>Name:</label>
+        <input type="text" value="<%= dog.getDogName() %>" readonly />
+    </div>
 
-<br>
-<a href="<%= request.getContextPath() %>/dog/show-all">← Retour à la liste</a>
+    <div>
+        <label>Breed:</label>
+        <input type="text" value="<%= dog.getRaceName() %>" readonly />
+    </div>
+
+    <div>
+        <label>Birth date:</label>
+        <input type="text" value="<%= dog.getBirthDate().format(DateTimeFormatter.ofPattern("dd/MM/yyyy")) %>" readonly />
+    </div>
+
+    <a href="<%= request.getContextPath() %>/dog/show-all">⟲ Return</a>
+</form>
 
 </body>
 </html>

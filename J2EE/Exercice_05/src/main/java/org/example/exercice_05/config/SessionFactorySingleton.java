@@ -1,4 +1,4 @@
-package org.example.exercice_05.controller;
+package org.example.exercice_05.config;
 
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;

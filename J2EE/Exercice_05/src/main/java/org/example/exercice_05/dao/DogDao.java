@@ -1,6 +1,6 @@
-package org.example.exercice_05.controller.dao;
+package org.example.exercice_05.dao;
 
-import org.example.exercice_05.controller.SessionFactorySingleton;
+import org.example.exercice_05.config.SessionFactorySingleton;
 import org.example.exercice_05.model.Dog;
 import org.hibernate.Session;
 

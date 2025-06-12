@@ -3,13 +3,17 @@
 <html>
 <head>
     <title>JSP - Hello World</title>
+    <%@include file="/style/importCss.jsp"%>
+
 </head>
 <body>
-<h1><%= "Hello World!" %>
-</h1>
-<br/>
-<a href="dog/add">more dog?</a>
-<a href="dog/detail">show one dog? ( going to go somewhere else, :) )</a>
-<a href="dog/show-all">show all dogs?</a>
+
+<div class="home-container">
+    <h1>🐶 Hello World!</h1>
+
+    <a href="<%= request.getContextPath() %>/dog/add"> Add a Dog</a>
+    <a href="<%= request.getContextPath() %>/dog/show-all"> Show All Dogs</a>
+</div>
+
 </body>
 </html>

@@ -1,0 +1,67 @@
+.view-form {
+    max-width: 80%;
+    max-height: 70%;
+    margin: 2rem auto;
+    background-color: #1e1e1e;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+}
+
+.view-form h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.view-form div {
+    margin-bottom: 1rem;
+}
+
+.view-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: #ddd;
+    font-weight: bold;
+}
+
+.view-form input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 1rem;
+}
+
+.view-form input:read-only {
+    background-color: #2a2a2a;
+    color: #ccc;
+    border: 1px solid #444;
+}
+
+.view-form a {
+    display: inline-block;
+    margin-top: 4rem;
+    padding: 10px 16px;
+    border: 2px solid #6c757d;
+    background-color: transparent;
+    color: #6c757d;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    float: right;
+    transition: 0.3s;
+}
+
+.view-form a:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+
+body.body-view{
+    background-color: #1e1e1e;
+}

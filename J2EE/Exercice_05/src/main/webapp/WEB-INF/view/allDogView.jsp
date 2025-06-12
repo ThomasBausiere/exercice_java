@@ -6,22 +6,23 @@
 <html>
 <head>
     <title>Liste des chiens</title>
+    <%@include file="/style/importCss.jsp"%>
 </head>
 <body>
 
-<h2>Liste des chiens</h2>
+<h2>- Dogs List -</h2>
 
 <% if (dogs.isEmpty()) { %>
-<p>Il n'y a pas encore de chien enregistré.</p>
+<p>There is no Dog already.</p>
 <% } else { %>
 <table border="1">
     <thead>
     <tr>
         <th>ID</th>
-        <th>Nom</th>
+        <th>Name</th>
         <th>Race</th>
-        <th>Date de naissance</th>
-        <th>Action</th>
+        <th>Date of birth</th>
+        <th>Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -42,6 +43,7 @@
     </tbody>
 </table>
 <% } %>
+<a class="add" href="add"> Add a Dog </a>
 
 </body>
 </html>

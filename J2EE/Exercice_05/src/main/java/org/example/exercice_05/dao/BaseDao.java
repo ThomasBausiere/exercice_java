@@ -1,4 +1,4 @@
-package org.example.exercice_05.controller.dao;
+package org.example.exercice_05.dao;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;

@@ -8,11 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Title</title>
+    <title>Add Dog</title>
+    <%@include file="/style/importCss3.jsp"%>
+
 </head>
 <body>
 <form action="form" method="post">
-    <h2>Form to add a dog</h2>
+    <h2>- Add a Dog-</h2>
     <div>
         <label for="dogname">Dog name: </label>
         <input type ="text" name="dogname" id="dogname">
@@ -26,7 +28,7 @@
         <label for="birthdate">Birth date: </label>
         <input type ="date"  name="birthdate" id="birthdate">
     </div>
-    <button>Add</button>
+    <button>Add Dog</button>
 
     <button class="button-80" role="button"><a href="/Exercice_05_war_exploded/"> Page d'accueil</a></button>
 
