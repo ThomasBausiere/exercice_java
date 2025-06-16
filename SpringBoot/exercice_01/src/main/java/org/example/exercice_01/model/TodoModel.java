@@ -9,4 +9,13 @@ public class TodoModel {
 
     public TodoModel(String name, String description, boolean b) {
     }
+
+    @Override
+    public String toString() {
+        return "TodoModel{" +
+                "name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", isDone=" + isDone +
+                '}';
+    }
 }
