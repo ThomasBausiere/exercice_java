@@ -46,7 +46,7 @@ public class RoutingServlet extends HttpServlet {
 
 
             case "/show-all":
-                List<Dog> dogs = dogDao.get(); // 🔥 Chargement depuis la base
+                List<Dog> dogs = dogDao.get(); 
                 req.setAttribute("dogs", dogs);
                 req.getRequestDispatcher("/WEB-INF/view/allDogView.jsp").forward(req, resp);
                 break;

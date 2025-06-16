@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Ici, la todo 1</title>
+</head>
+<body>
+    <h1>Todo 1 test</h1>
+    <p>nom de la todo: <span th:text="${name}"></span></p>
+    <p>description: <span th:text="${description}"></span></p>
+    <p th:if="${isDone}">état:terminé</p>
+    <p th:unless="${isDone}">A faire</p>
+
+
+</body>
+</html>
