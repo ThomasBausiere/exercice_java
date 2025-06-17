@@ -8,13 +8,13 @@
 <nav>
     <a th:href="@{/}">Home Page</a>
 </nav>
-<h1>Détail du contact</h1>
-<!--Affichage des details du contact-->
-<p>Product Id: <span th:text="${product.getId}"></span></p>
+<h1>Détail du Produit</h1>
+
+<p>Product Id: <span th:text="${product.getId()}"></span></p>
 <p>Product Name : <span th:text="${product.getName()}"></span></p>
 <p>Product category : <span th:text="${product.getCategory()}"></span></p>
 <p>Product Price : <span th:text="${product.getPrice()}"></span></p>
-<!--lien pour revenir sur la liste des contacts-->
+
 <a th:href="@{/list}">Retour Liste</a>
 </body>
 </html>

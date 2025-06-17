@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.UUID;
 
 @Controller
-public class ProductController {
+public class    ProductController {
 
     private final ProductService productService;
 
@@ -37,14 +37,23 @@ public class ProductController {
     @GetMapping("/detail/{productId}")
     public String detailPage(@PathVariable("productId") UUID productId, Model model){
         Product product = productService.getProductByID(productId);
-        model.addAttribute("Product", product);
+        model.addAttribute("product", product);
+        System.out.println(product);
         return "productpage";
+
     }
 
     @GetMapping("/search")
-    public Product showProductFiltred(@RequestParam(value ="category") String category,@RequestParam(value="price") double price, Model model){
-       Product productFind = productService.getProductByCategoryAndPrice(category, price);
-        return productFind;
+    public String showProductFiltred(@RequestParam(value = "category") String category,
+                                      @RequestParam(value = "price") double price, Model model){
+       List<Product> products = productService.getProductByCategoryAndPrice(category, price);
+       if(products == null){
+           return "homepage";
+       }else{
+           model.addAttribute("products", products);
+           return "pagelist";
+
+       }
     }
 
 

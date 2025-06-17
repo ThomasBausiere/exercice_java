@@ -60,9 +60,9 @@ public ProductService(){
         return this.products.get(id);
     }
 
-    public Product getProductByCategoryAndPrice(String category, double price){
+    public List<Product> getProductByCategoryAndPrice(String category, double price){
         return this.products.values().stream()
                 .filter(c -> c.getCategory().equals(category))
-                .filter(c -> c.getPrice()<=(price)).findAny().orElse(null);
+                .filter(c -> c.getPrice()<=(price)).toList();
     }
 }
