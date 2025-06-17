@@ -11,4 +11,15 @@ public class TodoService {
     public TodoService(List<TodoModel> todos) {
         this.todos = todos;
     }
+
+    public TodoModel getTodo(int id) {
+        TodoModel todoToGet;
+        for (TodoModel todos : todos) {
+            if (todos.getId(id) == id) {
+                todoToGet = todos;
+                return todoToGet;
+            }
+        }
+        return null;
+    }
 }
