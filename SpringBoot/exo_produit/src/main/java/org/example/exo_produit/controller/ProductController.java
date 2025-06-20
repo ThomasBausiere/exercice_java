@@ -24,7 +24,7 @@ public class    ProductController {
 
     @GetMapping("/")
     public String homepage(){
-        return "homepage";
+        return "redirect:/list";
     }
 
     @GetMapping("/list")
@@ -43,17 +43,15 @@ public class    ProductController {
 
     }
 
-    @GetMapping("/search")
+    @GetMapping("/search") //http://localhost:8080/search?category=console&price=280
     public String showProductFiltred(@RequestParam(value = "category") String category,
                                       @RequestParam(value = "price") double price, Model model){
        List<Product> products = productService.getProductByCategoryAndPrice(category, price);
-       if(products == null){
-           return "homepage";
-       }else{
+
            model.addAttribute("products", products);
            return "pagelist";
 
-       }
+
     }
 
 

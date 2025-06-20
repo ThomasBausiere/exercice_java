@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Liste des meubles</title>
+</head>
+<body>
+<h1>Liste des meubles</h1>
+
+<a th:href="@{/furniture/add}">Ajouter un meuble</a>
+<table border="1">
+    <thead>
+    <tr>
+        <th>Nom</th>
+        <th>Description</th>
+        <th>Prix</th>
+        <th>Stock</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="f : ${furnitures}">
+        <td th:text="${f.name}">Nom</td>
+        <td th:text="${f.description}">Desc</td>
+        <td th:text="${f.price}">0.0</td>
+        <td th:text="${f.stock}">0</td>
+        <td>
+            <form th:action="@{/cart/add}" method="post" style="display:inline">
+                <input type="hidden" name="furnitureId" th:value="${f.id}"/>
+                <input type="number" name="quantity" value="1" min="1" max="100"/>
+                <button type="submit">Ajouter au panier</button>
+            </form>
+
+            <!-- Modification / Suppression -->
+            <a th:href="@{'/furniture/add?id=' + ${f.id}}">Modifier</a>
+            <a th:href="@{'/furniture/delete/' + ${f.id}}">Supprimer</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a th:href="@{/cart}">Voir le panier</a>
+</body>
+</html>
