@@ -38,24 +38,31 @@ public class CartItemService {
         if(furniture == null || furniture.getStock() < quantity){
             return false;
         }
+        CartItem cartItemUsed = cartItemRepository.findByFurnitureId(furnitureId);
+        int itemQuantity = cartItemUsed.getQuantity();
+
+
 
         CartItem cartItem = CartItem.builder()
                 .furniture(furniture)
-                .quantity(quantity)
+                .quantity(quantity + itemQuantity)
                 .build();
         cartItemRepository.save(cartItem);
         return true;
+
     }
 
 
 
     //removeFromCart
     public boolean removeFromCart(Long furnitureId, int quantity) {
-        Optional<CartItem> optionalItem = cartItemRepository.findByFurnitureId(furnitureId);
+        CartItem optionalItem = cartItemRepository.findByFurnitureId(furnitureId);
 
-        if (optionalItem.isEmpty()) return false;
+        if (optionalItem == null){
+            return false;
+        }
 
-        CartItem item = optionalItem.get();
+        CartItem item = optionalItem;
 
         if (item.getQuantity() <= quantity) {
             cartItemRepository.delete(item);
