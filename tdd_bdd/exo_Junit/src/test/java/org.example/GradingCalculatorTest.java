@@ -23,29 +23,35 @@ public class GradingCalculatorTest {
 
     @Test
     public void whenGetGrade_80_60_Then_B(){
-        int a = 00;
-        int b = 70;
+        int a = 81;
+        int b = 61;
         String result  = "";
         if(a > 80 && b > 60){
             result = "B";
         }
+        //ASSERT
+        Assert.assertEquals("B", result);
     }
     @Test
-    public void whenGetGrade_60_60_Then_C(){
-        int a = 00;
-        int b = 70;
-        String result  = "";
+    public void whenGetGrade_60_60_Then_C() {
+        int a = 61;
+        int b = 61;
+        String result = "";
         if (a > 60 && b > 60) {
             result = "C";
         }
-
+        //ASSERT
+        Assert.assertEquals("C", result);
+    }
     @Test
     public void whenElse_Then_F(){
                 int a = 00;
                 int b = 70;
                 String result  = "";
             if (a <= 60 && b <= 60) {
-                result = "F"
+                result = "F";
             }
+            //ASSERT
+            Assert.assertEquals("F", result);
     }
 }
