@@ -12,4 +12,11 @@ public class RechercheVille{
        return  villes;
     }
 
+    public RechercheVille(List<String> villes) {
+        this.villes = villes;
+    }
+
+    public void setVilles(List<String> villes) {
+        this.villes = villes;
+    }
 }
