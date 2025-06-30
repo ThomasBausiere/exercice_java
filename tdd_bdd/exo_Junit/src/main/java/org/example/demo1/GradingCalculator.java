@@ -1,12 +1,12 @@
-package org.example;
+package org.example.demo1;
 
 public class GradingCalculator {
     public int score;
     public int attendancePercentage;
 
     public GradingCalculator(int score, int attendancePercentage) {
-        score = score;
-        attendancePercentage = attendancePercentage;
+        this.score = score;
+        this.attendancePercentage = attendancePercentage;
     }
 
     public char getGrade() {

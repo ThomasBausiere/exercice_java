@@ -1,17 +1,17 @@
-package org.example;
+package org.example.demo1;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-public class GradingCalculatorTest {
+public class GradingCalculatorTestInitial {
 
         private GradingCalculator gradingCalculator;
 
     @Test
     public void whenGetGrade_90_70_Then_A(){
         //ARRANGE
-        int a = 00;
-        int b = 70;
+        int a = 91;
+        int b = 71;
         String result  = "";
         //ACT
         if(a > 90 && b > 70){
@@ -46,9 +46,9 @@ public class GradingCalculatorTest {
     @Test
     public void whenElse_Then_F(){
                 int a = 00;
-                int b = 70;
+                int b = 00;
                 String result  = "";
-            if (a <= 60 && b <= 60) {
+            if (a <= 60 || b <= 60) {
                 result = "F";
             }
             //ASSERT
