@@ -44,7 +44,7 @@ public class ProduitServiceTest {
 
         //Act
         int vDResult=0;
-        if(produit.getSellIn()==0) {
+        if(produit.getSellIn() <= 0) {
              vDResult = vD * 2;
         }
         //Assert
