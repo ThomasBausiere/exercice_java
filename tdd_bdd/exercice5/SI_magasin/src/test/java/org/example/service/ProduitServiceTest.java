@@ -15,7 +15,6 @@ public class ProduitServiceTest {
     @BeforeEach //avant chaque test, j'instancie ProduitService
     public void updateProduit(){
         produitService = new ProduitService();
-        Produit produit = new Produit(TypeProduit.LAITIER, "ProduitTest", 20, 20 );
 
     }
 
