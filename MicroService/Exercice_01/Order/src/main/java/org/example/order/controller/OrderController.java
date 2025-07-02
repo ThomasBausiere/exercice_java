@@ -14,7 +14,7 @@ import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 @RestController
-@RequestMapping("/Order")
+@RequestMapping("/order")
 public class OrderController {
     private final RestTemplate restTemplate = new RestTemplate();
 
@@ -42,9 +42,9 @@ public class OrderController {
         Order order = new Order();
         order.setId(id);
         order.setDescription("Another description");
-        RestClient<Product> productRestClient = new RestClient<>("http://localhost:8081/adresse/"+id);
+        RestClient<Product> productRestClient = new RestClient<>("http://localhost:8081/product/"+id);
         Product product = productRestClient.get(Product.class);
-        RestClient<Customer> customerRestClient = new RestClient<>("htpp://localhost:8082/customer/+id");
+        RestClient<Customer> customerRestClient = new RestClient<>("htpp://localhost:8082/customer/"+id);
         Customer customer = customerRestClient.get(Customer.class);
         order.setProduct(product);
         order.setCustomer(customer);
