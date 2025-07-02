@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/customer")
 public class CustomerController {
     @GetMapping("/{id}")
-    public Customer getCustomer(@PathVariable int id){
+    public Customer getCustomer(@PathVariable Integer id){
         return new Customer(id, "Maverik");
     }
 }

@@ -19,7 +19,7 @@ public class OrderController {
     private final RestTemplate restTemplate = new RestTemplate();
 
     @GetMapping("/{id}")
-    public Order getOrder(@PathVariable int id){
+    public Order getOrder(@PathVariable Integer id){
         Order order = new Order();
         order.setId(id);
         order.setDescription(" Sans soupe miso, sauce sucrée");
@@ -38,13 +38,13 @@ public class OrderController {
     }
 
     @GetMapping("/detail/{id}")
-    public Order getSpecificOrder(@PathVariable int id){
+    public Order getSpecificOrder(@PathVariable Integer id){
         Order order = new Order();
         order.setId(id);
         order.setDescription("Another description");
         RestClient<Product> productRestClient = new RestClient<>("http://localhost:8081/product/"+id);
         Product product = productRestClient.get(Product.class);
-        RestClient<Customer> customerRestClient = new RestClient<>("htpp://localhost:8082/customer/"+id);
+        RestClient<Customer> customerRestClient = new RestClient<>("http://localhost:8082/customer/"+id);
         Customer customer = customerRestClient.get(Customer.class);
         order.setProduct(product);
         order.setCustomer(customer);
