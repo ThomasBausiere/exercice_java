@@ -43,12 +43,9 @@ public class ProduitServiceTest {
                 0);
 
         //Act
-        int vDResult=0;
-        if(produit.getSellIn() <= 0) {
-             vDResult = vD * 2;
-        }
+        produitService.updateProduct(produit);
         //Assert
-        Assert.assertEquals(vDExpected, vDResult);
+        Assert.assertEquals(8, produit.getQuality());
 
     }
     //quality >0 !important
