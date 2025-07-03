@@ -29,7 +29,7 @@ public class OrderService {
         return orderRepository.save(dtoToEntity(orderReceiveDto)).entityToDto();
     }
     //READ 1
-    public OrderResponseDto getOneOrder(Integer id){
+    public OrderResponseDto getOrderById(Integer id){
         return orderRepository.findById(id).orElseThrow(NotFoundException::new).entityToDto();
     }
     //READ ALL
@@ -42,8 +42,8 @@ public class OrderService {
             Order orderFound = orderRepository.findById(id).orElseThrow(NotFoundException::new);
             Order orderGet = dtoToEntity(orderReceiveDto);
             orderFound.setDescription(orderGet.getDescription());
-            orderFound.setProduct(orderGet.getProduct());
-            orderFound.setCustomer(orderGet.getCustomer());
+            orderFound.setProductId(orderGet.getProductId());
+            orderFound.setCustomerId(orderGet.getCustomerId());
             return orderRepository.save(orderFound).entityToDto();
     }
 
@@ -59,8 +59,8 @@ public class OrderService {
         RestClient<Customer> customerRestClient = new RestClient<>("http://localhost:8082/customer/"+(orderReceiveDto.getId()));
         return Order.builder()
                 .description(orderReceiveDto.getDescription())
-                .product(productRestClient.get(Product.class))
-                .customer(customerRestClient.get(Customer.class))
+                .productId(productRestClient.get(Product.class).getId())
+                .customerId(customerRestClient.get(Customer.class).getId())
                 .build();
     }
 

@@ -1,5 +1,6 @@
 package org.example.order.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -15,22 +16,21 @@ import org.example.order.dto.OrderResponseDto;
 @Table(name="OrderEntity")
 public class Order {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String description;
+    private Integer productId;
+    private Integer customerId;
 
-    @Transient
-    private Customer customer;
 
-    @Transient
-    private Product product;
+
 
     public OrderResponseDto entityToDto(){
         return OrderResponseDto.builder()
                 .id(getId())
                 .description(getDescription())
-                .product(getProduct())
-                .customer(getCustomer())
+                .product(getProductId())
+                .customer(getCustomerId())
                 .build();
     }
 
