@@ -1,0 +1,24 @@
+
+#nom pour l'action
+name: first
+#On précise l'action déclancheur
+on:
+    push:
+         branches:
+            - main
+    workflow_dispatch:
+
+#Définitions des actions
+jobs:
+    #definition de la premiere action à réaliser:
+    premier-job:
+        #on précise le system d'exploitation (runner)
+        runs-on: ubuntu-latest    
+        #on écrit ici les étapes de notre action
+        steps:
+            - name: Dit bonjour
+              run: echo "Hello World !"
+            - name: dit Au revoir
+              run: echo " GoodBy world !"
+
+    

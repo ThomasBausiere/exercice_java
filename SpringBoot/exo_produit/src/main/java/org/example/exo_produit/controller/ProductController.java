@@ -1,6 +1,7 @@
 package org.example.exo_produit.controller;
 
 
+import lombok.Value;
 import org.example.exo_produit.model.Product;
 import org.example.exo_produit.service.ProductService;
 import org.springframework.stereotype.Controller;
@@ -20,6 +21,15 @@ public class    ProductController {
 
     public ProductController(ProductService contactService) {
         this.productService = contactService;
+    }
+
+    @Value("${my.custom.value")
+        private String titre;
+
+    @GetMApping()
+    public String home(Model model){
+        model.addAttribute("titre",titre);
+        return "redirect:/list";
     }
 
     @GetMapping("/")
