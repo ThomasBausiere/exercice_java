@@ -1,0 +1,8 @@
+<main>
+
+    <h2 [class]="(count % 2 == 0) ? 'green' : 'red'"> {{count}}</h2>
+    
+    <button (click)="increment()"> +1 </button>
+    <button (click)="decrement()"> -1 </button>
+
+</main>

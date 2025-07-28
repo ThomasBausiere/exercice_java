@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Liste de Contacts</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Liste des contacts -->
+  <section class="contact-list-container">
+    <h2>Contacts</h2>
+    <div id="contacts-list" class="contacts-list">
+      <!-- Les contacts seront injectés ici dynamiquement -->
+    </div>
+    <button id="add-contact-btn" class="btn green">➕ Add</button>
+  </section>
+
+  <!-- Modale d'ajout de contact -->
+  <div id="add-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" id="close-add-modal">×</span>
+      <h2>Add a Contact</h2>
+      <form id="add-contact-form">
+        <label>Firstname:<input type="text" name="firstname" required></label>
+        <label>Lastname:<input type="text" name="lastname" required></label>
+        <label>Date Of Birth:<input type="date" name="dob" required></label>
+        <label>Email:<input type="email" name="email"></label>
+        <label>Phone number:<input type="tel" name="phone"></label>
+        <label>Avatar URL:<input type="url" name="avatar"></label>
+        <button type="submit" class="btn send">✉ Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modale de détails du contact -->
+  <div id="details-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn" id="close-details-modal">×</span>
+      <h2>Détails</h2>
+      <div class="contact-details">
+        <div class="left">
+          <label>Firstname:<input type="text" id="detail-firstname" readonly></label>
+          <label>Lastname:<input type="text" id="detail-lastname" readonly></label>
+          <label>Date Of Birth:<input type="text" id="detail-dob" readonly><span id="detail-age"></span></label>
+          <label>Email:<input type="email" id="detail-email" readonly></label>
+          <label>Phone number:<input type="tel" id="detail-phone" readonly></label>
+        </div>
+        <div class="right">
+          <img id="detail-avatar" src="" alt="Avatar" />
+        </div>
+      </div>
+      <div class="actions">
+        <button class="btn yellow">✏ Edit</button>
+        <button class="btn red">🗑 Delete</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>

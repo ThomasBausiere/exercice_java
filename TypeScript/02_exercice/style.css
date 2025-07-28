@@ -1,0 +1,177 @@
+/* Reset de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 2rem;
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+/* -------- Liste de contacts -------- */
+.contact-list-container {
+  background-color: #2c2c2c;
+  border-radius: 8px;
+  padding: 1.5rem;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.contacts-list button {
+  background-color: #1e1e1e;
+  border: 1px solid #555;
+  color: #fff;
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.contacts-list button:hover,
+.contacts-list button:focus {
+  background-color: #444;
+}
+
+.contacts-list button.selected {
+  background-color: #ffffff;
+  color: #1e1e1e;
+}
+
+/* -------- Bouton Add -------- */
+.btn {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.green {
+  background-color: #28a745;
+  color: white;
+}
+
+.green:hover {
+  background-color: #218838;
+}
+
+.yellow {
+  background-color: #ffc107;
+  color: #1e1e1e;
+}
+
+.red {
+  background-color: #dc3545;
+  color: white;
+}
+
+.send {
+  background-color: #007bff;
+  color: white;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.send:hover {
+  background-color: #0069d9;
+}
+
+/* -------- Modales -------- */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal-content {
+  background-color: #2c2c2c;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+}
+
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+/* -------- Formulaires -------- */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.9rem;
+}
+
+input {
+  margin-top: 0.3rem;
+  padding: 0.5rem;
+  background-color: #444;
+  border: 1px solid #666;
+  border-radius: 4px;
+  color: white;
+}
+
+/* -------- Détails -------- */
+.contact-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.contact-details .left,
+.contact-details .right {
+  flex: 1;
+}
+
+.contact-details img {
+  width: 100%;
+  max-width: 120px;
+  border-radius: 50%;
+  border: 2px solid #888;
+}
+
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
